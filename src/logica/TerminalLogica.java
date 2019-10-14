@@ -65,7 +65,7 @@ public class TerminalLogica {
          //   ejecuta.setParametros("l");
          //   ejecuta.setUrl("hola");
             
-            comandoClass = Class.forName(comandoNombre);
+            comandoClass = Class.forName("logica.comandos." + comandoNombre);
             if (argumentos.length > 1) {    // Si tiene paramatros llamo al constructor con parametro String                
                comandoParametros = entrada.substring(comandoNombre.length() + 1);
                comandoObj = comandoClass.getDeclaredConstructor(String.class).newInstance(comandoParametros);   
