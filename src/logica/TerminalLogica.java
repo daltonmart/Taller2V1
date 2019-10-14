@@ -59,12 +59,10 @@ public class TerminalLogica {
             argumentos = entrada.split(" ");
             comandoNombre = argumentos[0];
             
-            //this.identificarYCrearComando(comandoNombre);
-            
-            
+         //this.identificarYCrearComando(comandoNombre);
          //   ejecuta.setParametros("l");
          //   ejecuta.setUrl("hola");
-            
+
             comandoClass = Class.forName("logica.comandos." + comandoNombre);
             if (argumentos.length > 1) {    // Si tiene paramatros llamo al constructor con parametro String                
                comandoParametros = entrada.substring(comandoNombre.length() + 1);
